@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    background: linear-gradient(135deg, #d4fc79, #96e6a1); /* green pastel gradient */
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,21 +13,30 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
     text-align: center;
     box-sizing: border-box;
+    border: 1px solid #c3e6cb;
   }
   
   input {
     width: 100%;
     padding: 12px;
     margin: 0.6rem 0;
-    border: 1px solid #ccc;
+    border: 1px solid #b5dcb3;
     border-radius: 10px;
     font-size: 1rem;
     box-sizing: border-box;
+    background-color: #f4fff8;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #6fcf97;
+    box-shadow: 0 0 5px rgba(111, 207, 151, 0.4);
   }
   
   button {
@@ -35,7 +44,7 @@ body {
     padding: 12px;
     margin-top: 1rem;
     border: none;
-    background-color: #4a90e2;
+    background-color: #6fcf97; /* soft green */
     color: white;
     font-size: 1rem;
     border-radius: 10px;
@@ -44,14 +53,15 @@ body {
   }
   
   button:hover {
-    background-color: #357ABD;
+    background-color: #57bd84;
   }
   
   .error {
-    color: red;
+    color: #d9534f; 
     font-size: 0.9rem;
     margin-top: 0.5rem;
   }
+  
   
   /* Media Queries for smaller devices */
   @media screen and (max-width: 480px) {
@@ -60,7 +70,8 @@ body {
       border-radius: 15px;
     }
   
-    input, button {
+    input,
+    button {
       font-size: 0.95rem;
       padding: 10px;
     }

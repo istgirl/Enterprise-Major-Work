@@ -9,7 +9,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     console.log("Entered email:", email);
     console.log("Email length:", email.length);
 
-    // Check email domain
     const educationDomain = "@education.nsw.gov.au";
     const adminDomain = "@det.edu.nsw.au";
 
