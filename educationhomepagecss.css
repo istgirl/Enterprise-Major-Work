@@ -19,9 +19,10 @@ body {
     align-items: center;
     text-align: center;
     z-index: 1000;
-    animation: fadeIn 1.5s ease-out;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    animation: fadeIn 1.2s ease-out;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
+
   
   .banner.hidden {
     opacity: 0;
@@ -37,6 +38,7 @@ body {
     font-size: 1.2rem;
     color: #444;
   }
+  
   
   @keyframes fadeIn {
     from {
@@ -84,5 +86,46 @@ body {
     color: #4CAF50;
     margin-bottom: 0.5rem;
     display: block;
+  }
+  
+  
+/* Navigation Bar*/
+.sticky-nav {
+    opacity: 0; 
+    visibility: hidden; 
+    background: #1e40af;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+  }
+  
+
+  .sticky-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .sticky-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .sticky-nav ul li a:hover {
+    color: #6fcf97;
+  }
+  
+  .sticky-nav.show {
+    opacity: 1; 
+    visibility: visible; 
   }
   
