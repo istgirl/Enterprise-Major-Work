@@ -120,7 +120,7 @@
   .mood-2 { background-color: #ff9d3b; }  /* Anxious */
   .mood-3 { background-color: #ffeb3b; }  /* Neutral */
   .mood-4 { background-color: #8fe1c7; }  /* Good */
-  .mood-5 { background-color: #00ffb3; }  /* Happy */
+  .mood-5 { background-color: #76c7f4; }  /* Happy */
   
 @media (max-width: 768px) {
   .emoji-picker {
