@@ -1,29 +1,22 @@
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-    e.preventDefault();  
-  
+    e.preventDefault();
+
     const email = document.getElementById("email").value.trim().toLowerCase();
     const errorMsg = document.getElementById("error-message");
 
-    errorMsg.textContent = "";  
-
-    console.log("Entered email:", email);
-    console.log("Email length:", email.length);
+    errorMsg.textContent = ""; // Clear any previous error messages
 
     const educationDomain = "@education.nsw.gov.au";
     const adminDomain = "@det.edu.nsw.au";
 
-    console.log("Checking if email ends with:", educationDomain);
-    console.log("Ends with Education:", email.endsWith(educationDomain)); 
-
+    // Check if the email domain is valid
     if (email.endsWith(educationDomain)) {
-        console.log("Valid Education email detected.");  
-        document.getElementById("educationLink").click();  
+        localStorage.setItem('userEmail', email); // Store the email in localStorage
+        window.location.href = "educationhomepage.html"; // Redirect to homepage
     } else if (email.endsWith(adminDomain)) {
-        console.log("Valid Admin email detected.");  
-        document.getElementById("adminLink").click(); 
+        localStorage.setItem('userEmail', email); // Store the email in localStorage
+        window.location.href = "adminhomepage.html"; // Redirect to admin homepage (example)
     } else {
-        errorMsg.textContent = "Invalid email domain. Please use a valid NSW Education email.";
+        errorMsg.textContent = "Invalid email domain. Please use a valid NSW Education email."; // Show error if invalid domain
     }
 });
-
-  

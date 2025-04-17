@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education Page</title>
-  <link rel="stylesheet" href="educationhomepagecss.css" /> 
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="educationhomepagecss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
-  <nav>
-    <a href="#" class="logo">.</a>
-    <ul>
-      <li><a href="moodtrackerpage.html">Mood Tracker</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <section class="banner" id="banner">
+    <h1>👋 Welcome back, <span id="userName"></span>!</h1>
+    <p>Ready to jump back into learning?</p>
+  </section>
 
-  <h1>Education Page</h1>
+  <main class="cards-section">
+    <div class="card" onclick="location.href='moodtrackerpage.html'">
+      <i class="fas fa-book fa-2x"></i>
+      <h2>Assignments</h2>
+    </div>
+    <div class="card" onclick="location.href='timetable.html'">
+      <i class="fas fa-clock fa-2x"></i>
+      <h2>Timetable</h2>
+    </div>
+    <div class="card" onclick="location.href='notices.html'">
+      <i class="fas fa-bullhorn fa-2x"></i>
+      <h2>Notices</h2>
+    </div>
+    <div class="card" onclick="location.href='support.html'">
+      <i class="fas fa-tools fa-2x"></i>
+      <h2>Support</h2>
+    </div>
+  </main>
+  
+  <script src="educationhomepagejava.js"></script>
 </body>
 </html>
+  
