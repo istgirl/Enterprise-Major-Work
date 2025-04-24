@@ -6,14 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById('userName').textContent = capitalized;
     }
 
-    // Show the banner when the page loads
-    const banner = document.getElementById('banner');
-    banner.classList.add('visible'); // Make the banner visible
 
-    // Hide the banner after 3 seconds
+    const banner = document.getElementById('banner');
+    banner.classList.add('visible'); 
+
     setTimeout(() => {
-        banner.classList.remove('visible'); // Hide the banner after 3 seconds
-    }, 3000); // 3000ms = 3 seconds
+        banner.classList.remove('visible'); 
+    }, 2000); 
 });
 
 window.onbeforeunload = function () {
