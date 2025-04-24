@@ -1,0 +1,178 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #c6bcbc;
+  color: #2e3b2f;
+}
+
+/* Welcome Banner */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8); /* Fully opaque background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Fade effect */
+}
+
+.banner.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+
+
+.navbar {
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.logo{
+	width: 120px;
+	cursor: pointer;
+}
+
+.navbar ul li{
+	list-style: none;
+	display:inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #560808;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #580f0f;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+}
+
+
+/* Main content */
+.main-content {
+  padding-top: 120px; /* Space for the fixed navbar */
+  padding: 2rem;
+  text-align: center;
+  margin-top: 5rem; /* Additional space for clarity */
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  margin: 1rem 0;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Divider sections */
+.divider {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.divider h2 {
+  margin-bottom: 1rem;
+}
+
+.divider p {
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer .footer-links {
+  margin-top: 1rem;
+}
+
+footer a {
+  color: #ffdada;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
