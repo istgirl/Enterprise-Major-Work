@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Dashboard</title>
   <link rel="stylesheet" href="educationhomepagecss.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-  <!-- Welcome Banner -->
+  <div class="navbar">
+    <div class="logo">
+    <img src="..//images/logo.png" alt="Logo" class="logo">
+    </div>
+    <button id="toggleBtn" class="toggle-btn">&#9776;</button>
+    <ul id="navLinks">
+      <li><a href="educationhomepage.html">Home</a></li>
+      <li><a href="moodtrackerpage.html">Mood Tracker</a></li>
+      <li><a href="gamespage.html">Brain Games</a></li>
+      <li><a href="loginpage.html">Sign Out</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-sun"></i> 
+    </button>
+  </div>
+  
+
   <section class="banner" id="banner">
-    <h1>👋 Welcome back, <span id="userName"></span>!</h1>
+    <h1>👋 Welcome back, <span id="userName">Student</span>!</h1>
     <p>Ready to jump back into learning?</p>
   </section>
+  
 
-  <div class="up">
-    <div class="navbar">
-    <img src="../images/logo.png" class="logo">
-
- <ul>
-  <li><a href="educationhomepage.html">HOME</a></li> 
-     <li><a href="moodtrackerpage.html">MOOD TRACKER </a></li>
-    <li><a href="gamespage.html">BRAIN GAMES</a></li>
-     <li><a href="quiz.html">TAKE QUIZ</a></li>
-     <li><a href="about us.html">ABOUT US</a></li>
-     <li><a href="why us.html">WHY US</a></li>
-     <li><a href="loginpage.html">SIGN OUT</a></li>
-
- </ul>
-</div>
-
-
-  <!-- Main Content -->
   <div class="main-content">
     <section class="info-section" id="events">
-      <div class="info-card">
-        <img src="../images/imageone.jpg" alt="Image 1">
+      <div class="info-card fade-in">
+        <img src="../images/imageone.jpg" alt="Events">
         <h3>Upcoming Events</h3>
         <p>Check out all the exciting upcoming events and deadlines for this term!</p>
       </div>
-      <div class="info-card">
-        <img src="../images/imagetwo.jpeg" alt="Image 2">
+      <div class="info-card fade-in">
+        <img src="../images/imagetwo.jpeg" alt="Resources">
         <h3>Study Resources</h3>
         <p>Find all the resources you need to excel in your courses and studies.</p>
       </div>
-      <div class="info-card">
-        <img src="../images/imagethree.jpg" alt="Image 3">
+      <div class="info-card fade-in">
+        <img src="../images/imagethree.jpg" alt="Support">
         <h3>Student Support</h3>
         <p>Get the help you need from our support team. We're here for you!</p>
       </div>
     </section>
 
-    <section class="divider" id="updates">
-      <h2>Latest Updates</h2>
-      <p>Stay updated with the latest announcements, news, and changes in your school life.</p>
+    <section class="divider fade-in" id="updates">
+      <h2 class="dynamic-heading">Latest Updates</h2>
+      <p>Stay updated with announcements, news, and changes in your school life.</p>
     </section>
 
-    <section class="divider" id="exams">
-      <h2>Upcoming Exams</h2>
+    <section class="divider fade-in" id="exams">
+      <h2 class="dynamic-heading">Upcoming Exams</h2>
       <p>Don't miss any exam dates. Stay ahead of your schedule and perform well!</p>
     </section>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 EduTrack. All rights reserved.</p>
     <div class="footer-links">
