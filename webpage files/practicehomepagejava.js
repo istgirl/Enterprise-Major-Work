@@ -7,6 +7,16 @@ window.addEventListener('DOMContentLoaded', () => {
       const capitalized = name.charAt(0).toUpperCase() + name.slice(1);
       document.getElementById('userName').textContent = capitalized;
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('popup-banner');
+        
+        if (!sessionStorage.getItem('bannerShown')) {
+          banner.style.display = 'block'; // Show the banner
+          sessionStorage.setItem('bannerShown', 'true'); // Mark as shown
+        }
+      });
+      
   
     // Banner entry animation
     const banner = document.getElementById('banner');
@@ -51,9 +61,6 @@ window.addEventListener('scroll', () => {
   }
 
   showSlide(currentSlide);
-
-
-
 
 
 //dark mode light mode feature
