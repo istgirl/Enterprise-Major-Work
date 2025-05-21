@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1; 
+    z-index: 1000; 
 }
   
   
@@ -64,7 +64,7 @@
     position: absolute;
     height: 3px;
     width: 0;
-    background: #4e4e4e;
+    background: #870202;
     left: 0;
     bottom: -5px;
     transition: 0.5s;
@@ -75,26 +75,53 @@
     width: 100%;
   }
 
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5); 
+}
+
+/* Content header */
 .header {
-    text-align: center;
-    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../Images/aboringalartwork.webp);
-    background-repeat: repeat;
-    padding: 250px 0;
-    background-attachment:fixed;
-    font-size: 25px;
-    color:white;
-    animation: fade-down 0.5s;
-    min-height: 100vh;
-} 
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  animation: fade-down 0.5s;
+}
+
 
 
 /*section 2*/
 .mood-stats {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 60px 20px;
   background-color: #fff;
   flex-wrap: wrap;
+  min-height: 50vh;
 }
 
 .stat-box {
@@ -104,24 +131,24 @@
 }
 
 .progress-circle {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 140px;
 }
 
 .progress-circle .bg {
   fill: none;
   stroke: #eee;
-  stroke-width: 3.8;
+  stroke-width: 5;
 }
 
 .progress-circle .progress {
   fill: none;
   stroke: #580f0f;
-  stroke-width: 2.8;
+  stroke-width: 5;
   stroke-linecap: round;
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  transition: stroke-dashoffset 1s ease;
+  transition: stroke-dashoffset 4s ease;
   transform: rotate(-90deg);
   transform-origin: center;
 }
@@ -129,7 +156,7 @@
 .progress-circle .percentage {
   fill: #333;
   font-family: 'Segoe UI', sans-serif;
-  font-size: 6px;
+  font-size: 8px;
   text-anchor: middle;
   dominant-baseline: middle;
 }
@@ -137,52 +164,79 @@
 
 
 /* Section 3 Styling */
+
+
 .mood-prompt {
+  position: relative;
+  z-index: 1;
+  min-height: 5vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 80px 40px;
-  background-color: #f9f9f9;
-  min-height: 1vh;
+  overflow: hidden;
+  border-width: 8px;
+  background-image: url(../images/aboringalartwork.webp);
+  background-repeat: repeat;
+  background-position: center;
+  text-align: center;
 }
 
+.mood-prompt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+
 .mood-content {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
+  color: white;
 }
 
 .mood-prompt h2 {
   font-size: 2.5rem;
-  color: #3c0a0a;
+  color: #e2dfdf;
   margin-bottom: 20px;
   font-family: 'Segoe UI', sans-serif;
   font-weight: bold;
 }
 
 #typing-effect {
-  color: #580f0f;
+  color: #ffffff;
   font-weight: 600;
   padding-left: 5px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #580f0f;
+  border-right: 2px solid #737373;
 }
 
 .mood-prompt p {
   font-size: 1.1rem;
-  color: #444;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 15px;
+  justify-content: center;
 }
+
+
 
 /* Buttons */
 
 :root {
-  --maroon: #580f0f;
-  --white: #ffffff;
+  --maroon: #ffffff;
+  --white: #690808;
 }
 
 .button-primary,
@@ -229,13 +283,10 @@
 
 /* Footer */
 footer {
-  background: #222;
+  background: #ffffff;
   color: #fff;
   text-align: center;
   padding: 2rem;
-  border-style: solid;
-  border-color: #3e3b3b;
-  border-width: 10px;
 }
 
 

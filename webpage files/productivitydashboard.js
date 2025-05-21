@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearInterval(numberTimer);
             }
             textEl.textContent = `${count}%`;
-          }, 16);
+          }, 80);
   
           // Animate the circle
           requestAnimationFrame(() => {
