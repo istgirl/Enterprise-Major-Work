@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="..//images/logo.png">
+  <link rel="stylesheet" href="new mood tracker.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!--Navigation Bar-->
+  <div class="navbar">
+    <div class="logo">
+    <img src="..//images/logo.png" alt="Logo" class="logo">
+    </div>
+    <ul id="navLinks">
+      <li><a href="practice homepage.html">Home</a></li>
+      <li><a href="moodtrackerpage.html">Mood Tracker</a></li>
+      <li><a href="gamespage.html">Brain Games</a></li>
+      <li><a href="loginpage.html">Sign Out</a></li>
+    </ul>
+  </div>
+
+
+<div class="main-container">
+    <div class="tracker-wrapper">
+
+<!--heatmap grid-->  
+  <div class="heatmap-container">
+    <h2 class="wavy-text">mood tracker</h2>
+    <div id="heatmap-grid"></div>
+  </div>
+
+
+<!--mood input form-->  
+
+  <div class="form-container">
+    <select id="mood-select">
+      <option value="" disabled selected hidden> select your mood</option>
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="angry">Angry</option>
+      <option value="anxious">Anxious</option>
+      <option value="calm">Calm</option>
+    </select>
+
+    <textarea id="mood-note" placeholder="talk about your day (optional)"></textarea>
+
+    <button class="button-primary"onclick="logMood()">log</button>
+  </div>
+
+</div>
+</div>
+
+<!--footer-->
+  <footer>
+  <p>&copy; 2025 EduTrack. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact Us</a>
+  </div>
+</footer>
+
+<script src="new mood tracker.js"></script>
+
+</body>
+</html>

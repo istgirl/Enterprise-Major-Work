@@ -51,7 +51,7 @@
   
   .navbar ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
@@ -68,6 +68,7 @@
     left: 0;
     bottom: -5px;
     transition: 0.5s;
+    border-radius: 10px;
   }
 
   
@@ -75,160 +76,83 @@
     width: 100%;
   }
 
+/*heatmap grid*/
 
-  /*video*/
-.video-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.bg-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.5); 
-}
-
-/* Content header */
-.header {
-  position: relative;
-  min-height: 100vh;
+.main-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  z-index: 1;
-  text-align: center;
-}
-
-.header-content {
-  position: relative;
-  z-index: 2;
-  animation: fade-down 0.5s;
-}
-
-
-
-/*section 2*/
-.mood-stats {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 60px 20px;
-  background-color: #fff;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 150px;
+  padding: 40px;
   flex-wrap: wrap;
-  min-height: 50vh;
 }
 
-.stat-box {
-  text-align: center;
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-.progress-circle {
-  width: 120px;
-  height: 140px;
-}
-
-.progress-circle .bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 5;
-}
-
-.progress-circle .progress {
-  fill: none;
-  stroke: #580f0f;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  transition: stroke-dashoffset 4s ease;
-  transform: rotate(-90deg);
-  transform-origin: center;
-}
-
-.progress-circle .percentage {
-  fill: #333;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 8px;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
-
-
-
-/* Section 3 Styling */
-
-
-.mood-prompt {
-  position: relative;
-  z-index: 1;
-  min-height: 5vh;
+.tracker-wrapper {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  justify-content: center;
+  gap: 60px; 
+  flex-wrap: nowrap;
+}
+
+.heatmap-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 80px 40px;
-  overflow: hidden;
-  border-width: 8px;
-  background-image: url(../images/aboringalartwork.webp);
-  background-repeat: repeat;
-  background-position: center;
-  text-align: center;
+  margin-top: -50px;
 }
 
-.mood-prompt::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 0;
+#heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 5px;
+  margin-top: 10px;
 }
 
-
-.mood-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  color: white;
+.heatmap-cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 3px;
 }
 
-.mood-prompt h2 {
-  font-size: 2.5rem;
-  color: #e2dfdf;
-  margin-bottom: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: bold;
-}
+/*input mood form*/
 
-#typing-effect {
-  color: #ffffff;
-  font-weight: 600;
-  padding-left: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #737373;
-}
-
-.mood-prompt p {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
+.form-container {
   display: flex;
+  flex-direction: column;
   gap: 15px;
-  justify-content: center;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-top: 41px;
+}
+
+textarea {
+  width: 250px;
+  height: 120px;
+  padding: 10px;
+}
+
+input[type="text"],
+textarea {
+  font-family: 'Poppins', sans-serif; /* You can change this to any font you like */
+  font-size: 14px;
+  color: #333; /* Optional: Adjust text color */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-position 0.4s ease-out;
+  background-size: 200% 100%;
+  background-position: left;
 }
 
 
@@ -236,8 +160,8 @@
 /* Buttons */
 
 :root {
-  --maroon: #ffffff;
-  --white: #690808;
+  --maroon: #5c0000;
+  --white: #ffffff;
 }
 
 .button-primary,
@@ -280,9 +204,26 @@
   color: var(--white);
 }
 
+/*wavy text heading*/
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1.5deg); }
+  75% { transform: rotate(1.5deg); }
+}
+
+.wavy-text {
+  display: inline-block;
+  font-size: 32px;
+  animation: wave 1.5s infinite ease-in-out;
+  color: #870202;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
 
-/* Footer */
+
+  /* Footer */
 footer {
   background: #ffffff;
   color: #fff;
