@@ -1,30 +1,10 @@
-// When the DOM is loaded
 window.addEventListener('DOMContentLoaded', () => {
-    // Get the email and extract name
     const email = localStorage.getItem('userEmail');
     if (email) {
       const name = email.split('@')[0].split('.')[0];
       const capitalized = name.charAt(0).toUpperCase() + name.slice(1);
       document.getElementById('userName').textContent = capitalized;
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const banner = document.getElementById('popup-banner');
-        
-        if (!sessionStorage.getItem('bannerShown')) {
-          banner.style.display = 'block'; // Show the banner
-          sessionStorage.setItem('bannerShown', 'true'); // Mark as shown
-        }
-      });
-      
-  
-    // Banner entry animation
-    const banner = document.getElementById('banner');
-    banner.classList.add('visible');
-  
-    setTimeout(() => {
-      banner.classList.remove('visible');
-    }, 2000);
   });
   
   // Scroll to top on refresh

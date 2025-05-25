@@ -23,15 +23,22 @@ function logMood() {
   const note = document.getElementById('mood-note').value;
 
   if (!mood) {
-    alert("Please select a mood.");
+    alert("Please select a mood before logging.");
     return;
   }
 
   const cells = document.querySelectorAll('.heatmap-cell');
   if (currentCellIndex >= cells.length) {
+    cells[currentCellIndex].style.backgroundColor = moodColors[mood];
+    cells[currentCellIndex].title = note || mood; // Add tooltip with note/mood
+    currentCellIndex++;
     alert("You've filled the entire mood tracker!");
     return;
   }
+
+  // Optional: reset form
+  document.getElementById('mood-select').value = '';
+  document.getElementById('mood-note').value = '';
 
   cells[currentCellIndex].style.backgroundColor = moodColors[mood];
   currentCellIndex++;
