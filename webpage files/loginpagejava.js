@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     if (email.endsWith(educationDomain)) {
         localStorage.setItem('userEmail', email); 
-        window.location.href = "educationhomepage.html";
+        window.location.href = "practice homepage.html";
     } else if (email.endsWith(adminDomain)) {
         localStorage.setItem('userEmail', email); 
         window.location.href = "adminhomepage.html"; 
