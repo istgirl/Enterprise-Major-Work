@@ -20,7 +20,7 @@ body {
   padding: 0 20px;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.435);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #3c0a0a;
+  color: #535353;
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
@@ -62,7 +62,7 @@ body {
   position: absolute;
   height: 3px;
   width: 0;
-  background: #580f0f;
+  background: #413c3c;
   left: 0;
   bottom: -5px;
   transition: 0.3s;
@@ -130,7 +130,7 @@ body.dark {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(255, 255, 255, 0.268); 
   z-index: 1;
 }
 
@@ -153,13 +153,13 @@ body.dark {
 
 .banner h1 {
   font-size: 3rem;
-  color: #ffffff;
+  color: #272727;
   font-size: 40px;
 }
 
 .banner p {
   font-size: 1.5rem;
-  color: #d7d7d7;
+  color: #272727;
 }
 
 
@@ -191,6 +191,7 @@ body.dark {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
+    height: 80vh;
   }
   
 
@@ -278,7 +279,7 @@ body.dark {
   .slide {
     display: none;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     height:250px;
     object-fit: cover;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -295,19 +296,6 @@ body.dark {
   }
   
 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 12px;
-    color: #e0e0e0;
-    font-weight: bold;
-    font-size: 24px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    transform: translateY(-50%);
-  }
   
   .next {
     right: 0;
@@ -325,18 +313,20 @@ body.dark {
     z-index: 0;
   }
   
-  .button-grid {
-    position: relative;
-    z-index: 1;
-    border-style: solid;
-    border-color: #656565;
-    border-width: 10px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/aboringalartwork.webp');
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    background-position: center;
-    min-height: 200px;
-  }
+ 
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  justify-items: center;
+}
+
+  .grid-link {
+  text-decoration: none;
+  color: inherit;
+}
+
   .grid-btn {
     position: relative;
     z-index: 2;
@@ -351,23 +341,24 @@ body.dark {
     justify-items: center;
   }
   
-  
-  .grid-btn {
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    font-size: 1.25rem;
-    width: 100%;
-    max-width: 250px; 
-    height: 180px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
+ .grid-btn {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 2rem;
+  font-size: 1.25rem;
+  min-height: 180px;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
   
   .card .card:hover {
     transform: translateY(-5px);
@@ -384,10 +375,12 @@ body.dark {
   
   /* Quote Section */
   .quote-section {
+    background-color: white;
     padding: 5rem 2rem;
     text-align: center;
     height: 100%;
     min-height: 200px;
+    z-index: 2;
   }
   
   
@@ -406,13 +399,10 @@ body.dark {
 
 /* Footer */
 footer {
-    background: #222;
+    background: #747474;
     color: #fff;
     text-align: center;
     padding: 2rem;
-    border-style: solid;
-    border-color: #3e3b3b;
-    border-width: 10px;
   }
 
   
@@ -464,12 +454,12 @@ footer {
 
 /* Dark Mode */
 body.dark {
-  background: #1f1f1f;
+  background: #1f1f1f31;
   color: #e0e0e0;
 }
 
 body.dark .navbar {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.48);
 }
 
 body.dark .banner {

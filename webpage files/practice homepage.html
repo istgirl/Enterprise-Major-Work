@@ -13,7 +13,7 @@
 <!--Navigation Bar-->
   <div class="navbar">
     <div class="logo">
-    <img src="..//images/logo.png" alt="Logo" class="logo">
+    <img src="../images/logo.png" alt="Logo" class="logo">
     </div>
     <button id="toggleBtn" class="toggle-btn">&#9776;</button>
     <ul id="navLinks">
@@ -30,13 +30,13 @@
 
 <!--Banner-->
   <section class="banner" id="banner">
-    <video autoplay muted loop playsinline class="banner-video">
+    <video autoplay muted loop playsinline class="banner-video" poster="../images/homepage placeholder.png">
       <source src="../videos/homepage video (1).mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
     <div class="banner-content">
-    <h1>👋 Welcome back, <span id="userName">Student</span>!</h1>
+    <h1><i class="fa-solid fa-face-smile"></i> Welcome back, <span id="userName">Student</span>!</h1>
     <p>Ready to jump back into learning?</p>
     </div>
   </section>
@@ -59,9 +59,6 @@
           <img class="slide" src="../images/imagetwoslideshow.jpg" alt="Slide 1">
           <img class="slide" src="../images/imageoneslideshow.jpg" width=450px alt="Slide 2">
           <img class="slide" src="../images/imagethreeslideshow.jpg" alt="Slide 3">
-      
-          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-          <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
       </div>
 
@@ -75,11 +72,35 @@
 
 <!--Section 2-->
 <section class="button-grid">
-    <div class="grid-btn">Section 1</div>
-    <div class="grid-btn">Section 2</div>
-    <div class="grid-btn">Section 3</div>
-    <div class="grid-btn">Section 4</div>
-  </section>
+  <a href="adhd.html" class="grid-link">
+    <div class="grid-btn adhd-btn">
+      <i class="fas fa-bolt"></i>
+      <span>ADHD Quiz</span>
+    </div>
+  </a>
+
+  <a href="iq.html" class="grid-link">
+    <div class="grid-btn iq-btn">
+      <i class="fas fa-brain"></i>
+      <span>IQ Quiz</span>
+    </div>
+  </a>
+
+  <a href="anxiety.html" class="grid-link">
+    <div class="grid-btn anxiety-btn">
+      <i class="fas fa-heartbeat"></i>
+      <span>Anxiety Quiz</span>
+    </div>
+  </a>
+
+  <a href="depression.html" class="grid-link">
+    <div class="grid-btn depression-btn">
+      <i class="fas fa-cloud"></i>
+      <span>Depression Quiz</span>
+    </div>
+  </a>
+</section>
+
 
 
   <!-- Section 3: Quote -->
@@ -87,6 +108,7 @@
     <blockquote class="quote-text">
    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     </blockquote>
+    
   </section>
 
   <footer>
