@@ -83,7 +83,7 @@ nextBtn.addEventListener('click', () => {
     }
 
     alert(feedback);
-    window.location.href = "practice homepage.html";
+    window.location.href = "studenthomepage.html";
   }
 });
 

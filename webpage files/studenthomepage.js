@@ -45,7 +45,7 @@ window.addEventListener('scroll', () => {
 let slideIndex = 0;
 
 function showSlides() {
-  const slides = document.querySelectorAll(".slide"); // ✅ moved inside the function
+  const slides = document.querySelectorAll(".slide");
   slides.forEach(slide => slide.style.display = "none");
   
   slideIndex++;
@@ -53,7 +53,7 @@ function showSlides() {
 
   slides[slideIndex - 1].style.display = "block";
 
-  setTimeout(showSlides, 3000); // Change slide every 3 seconds
+  setTimeout(showSlides, 3000); 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -69,4 +69,18 @@ toggleButton.addEventListener('click', () => {
     icon.classList.toggle('fa-moon');
     icon.classList.toggle('fa-sun');
 });
+
+ window.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('reminder-popup');
+    
+    // Show the popup
+    setTimeout(() => {
+      popup.classList.add('active');
+
+      // Hide it again after 5 seconds
+      setTimeout(() => {
+        popup.classList.remove('active');
+      }, 5000);
+    }, 1000); // Delay before showing popup (1 sec after page load)
+  });
 

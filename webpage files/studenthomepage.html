@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Dashboard</title>
   <link rel="icon" type="image/x-icon" href="..//images/logo.png">
-  <link rel="stylesheet" href="practicehomepagecss.css">
+  <link rel="stylesheet" href="studenthomepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -15,18 +15,18 @@
     <div class="logo">
     <img src="../images/logo.png" alt="Logo" class="logo">
     </div>
-    <button id="toggleBtn" class="toggle-btn">&#9776;</button>
     <ul id="navLinks">
-      <li><a href="practice homepage.html">Home</a></li>
-      <li><a href="moodtrackerpage.html">Mood Tracker</a></li>
+      <li><a href="studenthomepage.css">Home</a></li>
+      <li><a href="moodtracker.html">Mood Tracker</a></li>
       <li><a href="gamespage.html">Brain Games</a></li>
       <li><a href="loginpage.html">Sign Out</a></li>
     </ul>
-    <button id="themeToggle" class="theme-toggle">
-      <i class="fas fa-sun"></i> 
-    </button>
   </div>
   
+<!--reminder popup-->
+<div id="reminder-popup" class="reminder-popup">
+  Don’t forget to complete your weekly check-in!
+</div>
 
 <!--Banner-->
   <section class="banner" id="banner">
@@ -50,7 +50,7 @@
         <p class="hero-subtext">Helping individuals find clarity and healing through expert counselling and compassionate care.</p>
         <div class="hero-buttons">
           <a href="productivitydashboard.html" class="button-primary">Dashboard</a>
-          <a href="card 1.html" class="button-secondary">Weekly Quiz</a>
+          <a href="weeklyquiz.html" class="button-secondary">Weekly Quiz</a>
         </div>
       </div>
 
@@ -72,31 +72,27 @@
 
 <!--Section 2-->
 <section class="button-grid">
-  <a href="adhd.html" class="grid-link">
+  <a href="https://headspace.org.au/" class="grid-link">
     <div class="grid-btn adhd-btn">
-      <i class="fas fa-bolt"></i>
-      <span>ADHD Quiz</span>
+      <span>HeadSpace</span>
     </div>
   </a>
 
-  <a href="iq.html" class="grid-link">
+  <a href="https://kidshelpline.com.au/" class="grid-link">
     <div class="grid-btn iq-btn">
-      <i class="fas fa-brain"></i>
-      <span>IQ Quiz</span>
+      <span>KidsHelpline</span>
     </div>
   </a>
 
-  <a href="anxiety.html" class="grid-link">
+  <a href="https://au.reachout.com/" class="grid-link">
     <div class="grid-btn anxiety-btn">
-      <i class="fas fa-heartbeat"></i>
-      <span>Anxiety Quiz</span>
+      <span>ReachOut</span>
     </div>
   </a>
 
-  <a href="depression.html" class="grid-link">
+  <a href="https://www.beyondblue.org.au/" class="grid-link">
     <div class="grid-btn depression-btn">
-      <i class="fas fa-cloud"></i>
-      <span>Depression Quiz</span>
+      <span>BeyondBlue</span>
     </div>
   </a>
 </section>
@@ -120,7 +116,7 @@
     </div>
   </footer>
     
-  <script src="practicehomepagejava.js"></script>
+  <script src="studenthomepage.js"></script>
 
 
 

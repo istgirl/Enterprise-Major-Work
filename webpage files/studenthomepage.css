@@ -399,7 +399,7 @@ body.dark {
 
 /* Footer */
 footer {
-    background: #747474;
+    background: #ffffff;
     color: #fff;
     text-align: center;
     padding: 2rem;
@@ -452,30 +452,6 @@ footer {
   }
   
 
-/* Dark Mode */
-body.dark {
-  background: #1f1f1f31;
-  color: #e0e0e0;
-}
-
-body.dark .navbar {
-  background: rgba(0, 0, 0, 0.48);
-}
-
-body.dark .banner {
-  background: linear-gradient(to bottom, #333, #444);
-}
-
-body.dark .hero,
-body.dark .button-grid
-body.dark .quote-section{
-  background: #2c2c2c;
-  color: #f0f0f0;
-}
-
-body.dark footer {
-  background: #111;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -539,3 +515,24 @@ body.dark footer {
     right: 0px;
     transform: rotate(3deg);
   }
+
+
+/*popup*/
+.reminder-popup {
+  position: fixed;
+  bottom: 20px;
+  right: -400px; /* hidden off screen */
+  background: #fff8e1bf;
+  color: #333;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  z-index: 1000;
+  transition: right 0.5s ease;
+}
+
+/* When active, slide into view */
+.reminder-popup.active {
+  right: 20px;
+}
