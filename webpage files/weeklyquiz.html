@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Health Check-In</title>
+  <link rel="icon" href="../images/logo.png" />
+  <link rel="stylesheet" href="weeklyquiz.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Logo" class="logo">
+    </div>
+    <ul id="navLinks">
+      <li><a href="practice homepage.html">Home</a></li>
+    </ul>
+  </div>
+
+  <!--progression bar-->
+ <div class="progress-bar">
+  <div class="progress" id="progress"></div>
+</div>
+
+    <!-- Main Quiz Section -->
+  <main class="quiz-container">
+     <div class="leaf-border">
+        <img src="../images/leavestopleft.png" alt="Leaf Top Left" class="leaf-corner top-left">
+        <img src="../images/leavesbottomright.png" alt="Leaf Bottom Right" class="leaf-corner bottom-right">
+    </div>
+
+    <div class="carousel">
+      <!-- Question 1 -->
+      <div class="question-card active" id="mood-card">
+        <h2>what best decribes your week so far?</h2>
+        <div class="emoji-options">
+          <button class="emoji" data-value="happy">😊</button>
+          <button class="emoji" ata-value="neutral">😐</button>
+          <button class="emoji" data-value="sad" >😞</button>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-card" id="sleep-card">
+        <h2>How did you sleep last night?</h2>
+        <input id="sleepSlider" type="range" min="0" max="10" class="slider" />
+        <div class="slider-labels">
+          <span> Poor</span>
+          <span> Excellent</span>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-card" id="stress-card">
+        <h2>How's your current stress level?</h2>
+        <div class="options">
+          <label><input type="radio" name="stress" value="Low" /> Low</label>
+          <label><input type="radio" name="stress" value="Moderate" /> Moderate</label>
+          <label><input type="radio" name="stress" value="High" /> High</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-card" id="activity-card">
+        <h2>How physically active have you been this week?</h2>
+        <input id="activitySlider" type="range" min="0" max="10" class="slider" />
+        <div class="slider-labels">
+          <span> Inactive</span>
+          <span> Very Active</span>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-card" id="connection-card">
+        <h2>How connected do you feel to people around you?</h2>
+        <div class="options">
+          <label><input type="radio" name="connected" /> Very connected</label>
+          <label><input type="radio" name="connected" /> Somewhat</label>
+          <label><input type="radio" name="connected" /> Not at all</label>
+        </div>
+      </div>
+
+       <!-- Question 6 -->
+      <div class="question-card">
+        <h2>Average phone screentime?</h2>
+        <input id="activitySlider" type="range" min="0" max="10" class="slider" />
+        <div class="slider-labels">
+          <span> 0 hours</span>
+          <span> 10 hours</span>
+        </div>
+      </div>
+
+    
+      <!-- Final Reflection -->
+      <div class="question-card">
+        <h2>Would you like to share anything else?</h2>
+        <textarea placeholder="Write your thoughts... (optional)"></textarea>
+      </div>
+
+      <!-- Navigation -->
+       <div class="button-group">
+         <button id="backBtn" class="back-btn">Back</button>
+         <button id="nextBtn"class="next-btn">Next</button>
+       </div>
+  </main>
+
+  <script src="weeklyquiz.js"></script>
+</body>
+</html>
