@@ -25,6 +25,15 @@ body {
 
 }
 
+.question-card h2 {
+  margin-bottom: 5px;
+}
+
+.question-card p {
+  margin-top: 0;
+}
+
+
 .logo {
   width: 60px;
   order: 0;

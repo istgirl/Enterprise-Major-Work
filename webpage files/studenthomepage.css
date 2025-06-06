@@ -521,7 +521,7 @@ footer {
 .reminder-popup {
   position: fixed;
   bottom: 20px;
-  right: -400px; /* hidden off screen */
+  right: -400px; 
   background: #fff8e1bf;
   color: #333;
   padding: 15px 25px;

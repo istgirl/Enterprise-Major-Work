@@ -46,6 +46,8 @@ let slideIndex = 0;
 
 function showSlides() {
   const slides = document.querySelectorAll(".slide");
+  if (slides.length === 0) return;  // no slides, exit early
+
   slides.forEach(slide => slide.style.display = "none");
   
   slideIndex++;
@@ -58,29 +60,27 @@ function showSlides() {
 
 document.addEventListener("DOMContentLoaded", () => {
   showSlides();
-});
 
-
-//dark mode light mode feature
   const toggleButton = document.getElementById('themeToggle');
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const icon = toggleButton.querySelector('i');
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
-});
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const icon = toggleButton.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+      }
+    });
+  }
 
- window.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('reminder-popup');
-    
-    // Show the popup
+  const popup = document.getElementById('reminder-popup');
+  if (popup) {
     setTimeout(() => {
       popup.classList.add('active');
 
-      // Hide it again after 5 seconds
       setTimeout(() => {
         popup.classList.remove('active');
       }, 5000);
-    }, 1000); // Delay before showing popup (1 sec after page load)
-  });
-
+    }, 1000);
+  }
+});
