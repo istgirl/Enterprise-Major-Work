@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: relative;
   top: 0;          
   margin-top: 0;
   padding-top: 0;
@@ -21,6 +21,21 @@
   width: 60px;
   order: 0;
 }
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#navLinks {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
     .navbar ul {
       display: flex;
@@ -66,6 +81,7 @@
       user-select: none;
       white-space: nowrap;
       margin-left: auto;
+      padding-left: -10px;
     }
 
     /* Timer Page Styles */
@@ -207,3 +223,51 @@
         margin-top: 120px;
       }
     }
+/* NavBar Dropdown*/
+.navbar ul li.dropdown {
+  position: relative;
+}
+
+.navbar ul li.dropdown > a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(240, 240, 240, 0.8);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.navbar ul li.dropdown .dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #535353;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar ul li.dropdown > a .fa-caret-down {
+  margin-left: 6px;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.navbar ul li.dropdown:hover > a .fa-caret-down {
+  transform: rotate(180deg);
+}
+
+
+

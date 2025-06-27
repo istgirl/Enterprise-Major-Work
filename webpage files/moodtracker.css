@@ -327,3 +327,49 @@ footer a::after {
 footer a:hover::after {
   width: 100%;
 }
+
+/* NavBar Dropdown*/
+.navbar ul li.dropdown {
+  position: relative;
+}
+
+.navbar ul li.dropdown > a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(240, 240, 240, 0.8);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.navbar ul li.dropdown .dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #535353;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar ul li.dropdown > a .fa-caret-down {
+  margin-left: 6px;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.navbar ul li.dropdown:hover > a .fa-caret-down {
+  transform: rotate(180deg);
+}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Dashboard</title>
   <link rel="icon" type="image/x-icon" href="..//images/logo.png">
-  <link rel="stylesheet" href="productivitydashboardcss.css">
+  <link rel="stylesheet" href="productivitydashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -13,12 +13,17 @@
 <!--Navigation Bar-->
   <div class="navbar">
     <div class="logo">
-    <img src="..//images/logo.png" alt="Logo" class="logo">
-    </div>
+    <img src="../images/logo.png" alt="Logo" class="logo">
+  </div>
     <ul id="navLinks">
       <li><a href="studenthomepage.html">Home</a></li>
       <li><a href="moodtracker.html">Mood Tracker</a></li>
-      <li><a href="gamespage.html">Brain Games</a></li>
+     <li class="dropdown">
+        <a href="#" class="dropbtn">Utilities <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+    <li><a href="braingame.html">Brain Game</a></li>
+    <li><a href="productivitytimer.html">Timer</a></li>
+    </ul>
       <li><a href="loginpage.html">Sign Out</a></li>
     </ul>
   </div>

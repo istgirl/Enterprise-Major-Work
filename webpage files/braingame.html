@@ -2,21 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Memory Flip Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="..//images/logo.png">
   <link rel="stylesheet" href="braingame.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-<a href="educationhomepage.html" class="home-btn">Home</a>
+<!--Navigation Bar-->
+  <div class="navbar">
+    <div class="logo">
+    <img src="../images/logo.png" alt="Logo" class="logo">
+    </div>
 
+  <div class="nav-center">
+    <ul id="navLinks">
+      <li><a href="studenthomepage.html">Home</a></li>
+      <li><a href="moodtracker.html">Mood Tracker</a></li>
+     
+     <li class="dropdown">
+        <a href="#" class="dropbtn">Utilities <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+    <li><a href="productivitytimer.html">Timer</a></li>
+    <li><a href="braingame.html">Brain Game</a></li>
+    </ul>
+    </li>
 
-  <h1> Memory Flip Game</h1>
-  <div class="game-board" id="board"></div>
+      <li><a href="loginpage.html">Sign Out</a></li>
+    </ul>
+</div>
 
-  <div id="winPopup" class="popup hidden">
+      <!--stats container -->
+  <div class="nav-stats">
+    <div class="nav-stat">
+      <span>Moves:</span>
+      <span class="nav-stat-value" id="moves">0</span>
+    </div>
+    <div class="nav-stat">
+      <span>Matches:</span>
+      <span class="nav-stat-value" id="matches">0</span>
+    </div>
+  </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 class="wavy-text">Memory Flip Game</h1>
+    <div class="game-board" id="board"></div>
+  </div>
+
+  <!-- Rules Popup -->
+  <div class="popup" id="rulesPopup">
     <div class="popup-content">
-      <h2>🎉 You Won!</h2>
-      <button onclick="restartGame()">Play Again</button>
+      <h2>How to Play</h2>
+      <p>Test your memory with this matching game!</p>
+      <ul>
+        <li>Flip two cards at a time to find matching pairs</li>
+        <li>If they match, they'll stay flipped</li>
+        <li>If not, they'll flip back over</li>
+        <li>Complete the game by finding all pairs</li>
+        <li>Try to finish in as few moves as possible!</li>
+      </ul>
+      <button class="btn" id="startGameBtn">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Win Popup -->
+  <div class="popup" id="winPopup">
+    <div class="popup-content">
+      <h2>🎉 Congratulations! 🎉</h2>
+      <p>You completed the game in <span id="finalMoves">0</span> moves!</p>
+      <div class="popup-buttons">
+      <button class="btn" id="playAgainBtn">Play Again</button>
+      <a href="studenthomepage.html" class="btn home-btn">Home</a>
+    </div>
     </div>
   </div>
   

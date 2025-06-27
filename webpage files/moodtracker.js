@@ -1,10 +1,9 @@
-// Define mood colors
 const moodColors = {
-  happy: '#FFD700',   // yellow
-  sad: '#6495ED',     // blue
-  angry: '#FF4500',   // red
-  anxious: '#FFA07A', // light orange
-  calm: '#90EE90'     // light green
+  happy: '#FFD700',  
+  sad: '#6495ED',    
+  angry: '#FF4500',  
+  anxious: '#FFA07A',
+  calm: '#90EE90'    
 };
 
 let currentCellIndex = 0;
