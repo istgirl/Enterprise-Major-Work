@@ -1,41 +1,54 @@
-let box = document.getElementById('reactionBox');
-let message = document.getElementById('message');
-let result = document.getElementById('result');
 
-let startTime, timeoutId;
-let gameStarted = false;
-let greenShown = false;
+  const timerDisplay = document.getElementById("timer");
+  const lastSessionNav = document.getElementById("lastSessionNav");
+  const progressPath = document.querySelector(".circle-progress");
 
-function startGame() {
-  gameStarted = true;
-  greenShown = false;
-  result.textContent = '';
-  message.textContent = 'Wait for green...';
-  box.classList.remove('green');
+  let startTime, updatedTime, difference = 0;
+  let timerInterval = null;
+  const durationLimit = 60 * 60 * 1000;
+  const fullOffset = 408;
 
-  const waitTime = Math.random() * 2000 + 2000; // 2–4s
-
-  timeoutId = setTimeout(() => {
-    box.classList.add('green');
-    message.textContent = 'CLICK!';
-    startTime = new Date().getTime();
-    greenShown = true;
-  }, waitTime);
-}
-
-box.addEventListener('click', () => {
-  if (!gameStarted) {
-    startGame();
-  } else if (!greenShown) {
-    clearTimeout(timeoutId);
-    message.textContent = 'Too soon!';
-    result.textContent = 'Try again!';
-    gameStarted = false;
-  } else {
-    const reactionTime = new Date().getTime() - startTime;
-    message.textContent = `Your time: ${reactionTime} ms`;
-    result.textContent = 'Click to try again!';
-    gameStarted = false;
-    greenShown = false;
+  function formatTime(ms) {
+    const totalSeconds = Math.floor(ms / 1000);
+    const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+    const seconds = String(totalSeconds % 60).padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
   }
-});
+
+  function updateDisplay() {
+    updatedTime = Date.now() - startTime + difference;
+    timerDisplay.textContent = formatTime(updatedTime);
+    const percent = Math.min(updatedTime / durationLimit, 1);
+    progressPath.style.strokeDashoffset = fullOffset * (1 - percent);
+  }
+
+  function startTimer() {
+    if (!timerInterval) {
+      startTime = Date.now();
+      timerInterval = setInterval(updateDisplay, 1000);
+    }
+  }
+
+  function pauseTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      difference = updatedTime || 0;
+      const formatted = formatTime(difference);
+      lastSessionNav.textContent = `Last Session: ${formatted}`;
+    }
+  }
+
+  
+
+  function resetTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    difference = 0;
+    updatedTime = 0;
+    timerDisplay.textContent = "00:00:00";
+    progressPath.style.strokeDashoffset = fullOffset;
+    lastSessionNav.textContent = `Last Session: None`;
+  }
+

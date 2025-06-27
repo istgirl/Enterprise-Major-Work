@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reaction Time Test</title>
-  <link rel="stylesheet" href="braingame(2)pagecss.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Timer</title>
+    <link href="braingame(2)pagecss.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
+
 <body>
-  <div id="reactionBox">
-    <p id="message">Click anywhere to start</p>
-    <p id="result"></p>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Logo" class="logo" />
+    </div>
+    <ul id="navLinks">
+      <li><a href="studenthomepage.css">Home</a></li>
+      <li><a href="moodtracker.html">Mood Tracker</a></li>
+      <li><a href="gamespage.html">Brain Games</a></li>
+      <li><a href="loginpage.html">Sign Out</a></li>
+    </ul>
+    <div class="last-session" id="lastSessionNav">Last Session: None</div>
   </div>
 
-  <script src="braingame(2)pagejava.js"></script>
+  <!-- Timer semi circle -->
+   <main class="main-content">
+  <div class="semi-circle-container">
+    <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" >
+      <path class="circle-bg" d="M 20 150 A 130 130 0 0 1 280 150" />
+      <path class="circle-progress" d="M 20 150 A 130 130 0 0 1 280 150" stroke-dasharray="408" stroke-dashoffset="408" />
+    </svg>
+    <div class="time-display" id="timer">00:00:00</div>
+  </div>
+
+  <!-- Buttons below -->
+  <div class="buttons">
+    <button onclick="startTimer()">Start</button>
+    <button class="pause" onclick="pauseTimer()">Pause</button>
+    <button class="reset" onclick="resetTimer()">Reset</button>
+  </div>
+</main>
+
+<script src="braingame(2)pagejava.js"></script>
 </body>
 </html>

@@ -72,44 +72,9 @@ body {
   width: 100%;
 }
 
-.toggle-Btn {
-  display: none;
-  font-size: 30px;
-  background: transparent;
-  border: none;
-  color: #333;
-  cursor: pointer;
-}
 
-.navbar #themeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  z-index: 2000;
-}
 
-.navbar #toggleBtn {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  order: 2;
-}
 
-#themeToggle:hover {
-  background: #444;
-}
-
-body.dark {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
 
 .banner {
   position: relative;
