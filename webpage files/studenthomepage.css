@@ -475,3 +475,50 @@ margin-top: 30px;
 .reminder-popup.active {
   right: 20px;
 }
+
+
+.navbar ul li.dropdown {
+  position: relative;
+}
+
+.navbar ul li.dropdown > a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.navbar ul li.dropdown .dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #535353;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar ul li.dropdown .dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.navbar ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar ul li.dropdown > a .fa-caret-down {
+  margin-left: 6px;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
