@@ -8,7 +8,7 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: #fff;
-    background: url('../images/aboringalartwork.webp');
+    background: url('../images/Green\ Aboriginal\ Art.png');
     background-repeat: repeat;
   }
 
@@ -84,7 +84,7 @@
     position: absolute;
     height: 3px;
     width: 0;
-    background: #870202;
+    background: #003c04;
     left: 0;
     bottom: -5px;
     transition: 0.5s;
@@ -206,13 +206,32 @@ button {
   background-position: left;
 }
 
+/* Footer */
+.dashboard-footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 30px;
+}
+
+.dashboard-footer p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.social-icons i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
 
 
 /* Buttons */
 
 :root {
-  --maroon: #a45b5b;
-  --white: #ffffff;
+  --maroon: #6dbe5c;
+  --white: #005100;
 }
 
 .button-primary,
@@ -274,60 +293,6 @@ button {
 
 
 
-  /* Footer */
-footer {
-  background: #ffffff;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-
-footer .footer-links {
-  margin-top: 1rem;
-  text-decoration: none;
-}
-
-footer a {
-  color: #ffdada;
-  margin: 0 1rem;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: none;
-  color: #ff8c8c;
-}
-
-.fade-in.visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-footer a {
-  color: #ffdada;
-  margin: 0 1rem;
-  text-decoration: none;
-  position: relative; 
-  padding-bottom: 4px; 
-}
-
-footer a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0%;
-  background-color: #ff8c8c; 
-  transition: width 0.3s ease;
-}
-
-footer a:hover::after {
-  width: 100%;
-}
-
 /* NavBar Dropdown*/
 .navbar ul li.dropdown {
   position: relative;
@@ -372,4 +337,51 @@ footer a:hover::after {
 
 .navbar ul li.dropdown:hover > a .fa-caret-down {
   transform: rotate(180deg);
+}
+
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #535353;
+}
+
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  #navLinks {
+    display: none;
+  }
+  
+  #navLinks.active {
+    display: flex;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .navbar ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background: rgba(122, 122, 122, 0.793);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: left 0.3s ease;
+  }
+
+  .navbar ul.active {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }

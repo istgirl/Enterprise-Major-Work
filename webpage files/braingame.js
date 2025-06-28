@@ -137,3 +137,4 @@
 
     // Initialize the game when DOM is loaded
     document.addEventListener('DOMContentLoaded', initGame);
+

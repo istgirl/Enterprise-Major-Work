@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Analytics Dashboard | MacWell Hub</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="Logo" class="logo">
+  </div>
+  <ul id="navLinks">
+    <li><a href="studenthomepage.html">Home</a></li>
+    <li><a href="moodtracker.html">Mood Tracker</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Utilities <i class="fa fa-caret-down"></i></a>
+      <ul class="dropdown-content">
+        <li><a href="braingame.html">Brain Game</a></li>
+        <li><a href="productivitytimer.html">Timer</a></li>
+      </ul>
+    </li>
+    <li><a href="loginpage.html">Sign Out</a></li>
+  </ul>
+</div>
+
+<main class="dashboard-container">
+  <header class="dashboard-header">
+    <h1 class="wavy-text">Student Analytics Dashboard</h1>
+  </header>
+
+
+
+  <!-- Graph 1: Mood Heatmap -->
+  <section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-calendar-alt"></i> Weekly Mood Trends</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+    <p class="graph-desc">
+    Your Mood Heatmap transforms your daily mood logs into a colourful calendar, letting you track emotional patterns over time. Each day's colour reflects how you felt (look at the legend), helping you spot trends (like recurring stress in Week 9), plan ahead for challenging periods, and celebrate positive weeks. <b> Hover over any day to revisit your mood entry, and explore connections between your schedule and emotions! </b>
+    </p>
+    <div class="graph-visualization">
+      <iframe 
+        src="https://public.tableau.com/views/FinalMacWellHubVisulisationsstudent/Sheet1?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+        width="100%"
+        height="400px"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Graph 2: Screentime vs Sleep -->
+  <section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-bed"></i> Screentime vs Sleep Analysis</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+    <p class="graph-desc">
+      This graph reveals the direct trade-off between your screen time and sleep, when one rises, the other often falls. Seeing these patterns helps you spot sleep-stealing habits and identify weeks when better balance boosted your energy. Use these insights to build a nighttime routine that works for you, not against you. <b>Hover over the lines to revist your stress level and screentime hours for specfic days! </b>
+    </p>
+    <div class="graph-visualization">
+      <iframe
+        src="https://public.tableau.com/views/RelationshipBetweenScreentimeandSleepHours/Sheet2?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+        width="100%"
+        height="600px"
+        frameborder="0"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+<!--Graph 3: Sleep vs Stress-->
+  <section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-calendar-alt"></i>Sleep vs Stress</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+  <p class="graph-desc">
+    Shows how sleep hours correlate with stress levels. 
+    Trend line reveals if more sleep reduces stress.
+  </p>
+<div class="graph-visualization">
+<iframe
+  src="https://public.tableau.com/views/RelationshipBetweenStressandSleepHours/Sheet3?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+  width="100%"
+  height="600px"
+  frameborder="0"
+  style="border: none;"
+  allowfullscreen
+></iframe>
+</div>
+</section>
+
+<!--Graph 4: Top Productive Weeks-->
+<section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-calendar-alt"></i> Top productive weeks</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+  <p class="graph-desc">
+    Shows how sleep hours correlate with stress levels. 
+    Trend line reveals if more sleep reduces stress.
+  </p>
+<div class="graph-visualization">
+
+<iframe
+  src="https://public.tableau.com/views/TopProductiveWeeks/Sheet5?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+  width="100%"
+  height="650px"
+  frameborder="0"
+  style="border: none;"
+  allowfullscreen
+></iframe>
+</div>
+</section>
+
+<!--Graph 5: Connection to Peers-->
+<section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-calendar-alt"></i> Connection to Peers</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+  <p class="graph-desc">
+    Shows how sleep hours correlate with stress levels. 
+    Trend line reveals if more sleep reduces stress.
+  </p>
+<div class="graph-visualization">
+<iframe
+  src="https://public.tableau.com/views/BeingConnectedtoPeers/Sheet4?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+  width="100%"
+  height="450px"
+  frameborder="0"
+  style="border: none;"
+  allowfullscreen
+></iframe>
+</div>
+</section>
+
+<!--Graph 6: Physical Activity Each Month-->
+<section class="graph-container">
+    <div class="graph-header">
+      <h2><i class="fas fa-calendar-alt"></i> Connection to Peers</h2>
+      <div class="graph-actions">
+        <button class="info-btn" title="More information"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+  <p class="graph-desc">
+    Shows how sleep hours correlate with stress levels. 
+    Trend line reveals if more sleep reduces stress.
+  </p>
+<div class="graph-visualization">
+<iframe
+  src="https://public.tableau.com/views/PhysicalActivityEachMonth/Sheet6?:embed=y&:showVizHome=no&:tabs=no&:toolbar=no"
+  width="100%"
+  height="450px"
+  frameborder="0"
+  style="border: none;"
+  allowfullscreen
+></iframe>
+</div>
+</section>
+
+</main>
+
+<footer class="dashboard-footer">
+  <p>© 2023 MacWell Hub - Student Wellbeing Analytics</p>
+  <div class="footer-links">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+  </div>
+</footer>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
