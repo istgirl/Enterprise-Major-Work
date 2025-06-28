@@ -88,3 +88,41 @@ button:hover {
     height: auto;
   }
 }
+
+a {
+  text-decoration: none;
+  color: rgb(93, 0, 0);
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 0 10px; /* Match container padding */
+}
+
+.login-logo {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+}
+
+h1 {
+  color: #000000;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
