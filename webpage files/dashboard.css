@@ -145,7 +145,7 @@ body {
 .dashboard-container {
   max-width: 1200px;
   margin: 30px auto;
-  padding: 0 20px;
+  padding: 0 85px;
 }
 
 .dashboard-header {
@@ -222,7 +222,6 @@ body {
 
 /* Graph description - initially hidden */
 .graph-desc {
-  display: none;
   padding: 0 25px 20px;
   color: var(--dark-color);
   font-size: 0.95rem;
@@ -263,8 +262,8 @@ body {
 
 /* Footer */
 .dashboard-footer {
-  background-color: var(--dark-color);
-  color: white;
+  background-color: #eef4ee82;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 25px 20px;
   margin-top: 50px;

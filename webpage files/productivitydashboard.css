@@ -1,0 +1,264 @@
+
+
+.navbar {
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; 
+    background: rgba(255, 255, 255, 0.175);
+    backdrop-filter: blur(8px);
+    height: 70px;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 100;
+    flex-direction: row;
+}
+  
+.logo {
+    width: 60px;
+    order: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+  
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding-right: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+}
+  
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+  
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: #b8b8b8a1;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+  
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* New styles for the rest of the page */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #388E3C;
+  --accent-color: #8BC34A;
+  --dark-color: #1B5E20;
+  --light-color: #C8E6C9;
+  --text-color: #E8F5E9;
+  --text-light: #A5D6A7;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 70px; /* To account for fixed navbar */
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 40, 0, 0.85)), 
+    url('../images/Green\ Aboriginal\ Art.png') center center fixed;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+/* Main Content */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 85px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Graph Containers */
+.graph-container {
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.678);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: rgba(0, 100, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.graph-header h2 {
+  font-size: 1.3rem;
+  color: #073d00;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.graph-desc {
+  padding: 0 25px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+/* Info button styles */
+.info-btn {
+  background: none;
+  border: none;
+  color: var(--dark-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: var(--secondary-color);
+  padding: 5px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-btn:hover {
+  background-color: rgba(72, 239, 100, 0.1);
+}
+
+
+.graph-desc {
+  padding: 0 25px 20px;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+.graph-visualization {
+  padding: 0 15px 20px;
+}
+
+.graph-visualization iframe {
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1.5deg); }
+  75% { transform: rotate(1.5deg); }
+}
+
+.wavy-text {
+  display: inline-block;
+  font-size: 32px;
+  animation: wave 1.5s infinite ease-in-out;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+/* Footer */
+.dashboard-footer {
+  background-color: #eef4ee82;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 50px;
+}
+
+.dashboard-footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .graph-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
