@@ -1,10 +1,9 @@
-// Utility: show one form, hide others
 function toggleForm(form) {
   document.getElementById("login-section").style.display = form === "login" ? "block" : "none";
   document.getElementById("signup-section").style.display = form === "signup" ? "block" : "none";
   document.getElementById("forgot-section").style.display = form === "forgot" ? "block" : "none";
 
-  // Reset forgot form states when toggling
+
   document.getElementById("forgotForm").style.display = "block";
   document.getElementById("resetForm").style.display = "none";
 
@@ -28,7 +27,6 @@ function saveUsers(users) {
   localStorage.setItem("users", JSON.stringify(users));
 }
 
-// Check valid email domain
 function validEmailDomain(email) {
   return (
     email.endsWith("@education.nsw.gov.au") ||
@@ -36,7 +34,6 @@ function validEmailDomain(email) {
   );
 }
 
-// LOGIN
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -71,7 +68,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   }
 });
 
-// SIGNUP
+
 document.getElementById("signupForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -97,7 +94,6 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
     return;
   }
 
-  // Save user
   users[email] = password;
   saveUsers(users);
 
@@ -105,7 +101,7 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
   toggleForm("login");
 });
 
-// FORGOT PASSWORD - Step 1: Enter email
+
 document.getElementById("forgotForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -125,15 +121,13 @@ document.getElementById("forgotForm").addEventListener("submit", function (e) {
     return;
   }
 
-  // Show reset password form
+
   document.getElementById("forgotForm").style.display = "none";
   document.getElementById("resetForm").style.display = "block";
 
-  // Save email temporarily for reset
   sessionStorage.setItem("resetEmail", email);
 });
 
-// FORGOT PASSWORD - Step 2: Reset password
 document.getElementById("resetForm").addEventListener("submit", function (e) {
   e.preventDefault();
 

@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   faders.forEach(fader => appearOnScroll.observe(fader));
 
-  // Typing effect in mood section
+ 
   const words = ["happy?", "sad?", "anxious?", "calm?", "neutral?"];
   const element = document.getElementById("typing-effect");
   if (element) {
@@ -80,3 +80,16 @@ window.addEventListener('DOMContentLoaded', () => {
   showSlide(currentSlide);
   setInterval(nextSlide, 3000); // change slide every 3 seconds
 });
+
+  // Fade in the quote when it comes into view
+window.addEventListener('scroll', () => {
+    const quote = document.querySelector('.quote-text');
+    const quotePos = quote.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.2;
+  
+    if (quotePos < screenPos) {
+      quote.style.opacity = 1;
+      quote.style.transform = 'translateY(0)';
+    }
+ 
+  });  

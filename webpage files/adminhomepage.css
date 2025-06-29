@@ -7,13 +7,14 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #eaeaea;
-  color: #ffffff;
+  background: transparent;
   z-index: 0;
+  overflow-x: hidden;
 }
 
 
 
+/*navbar*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -127,58 +128,6 @@ body {
   color: #ffffff;
 }
 
-/* Main content */
-.main-content {
-  max-width: 1200px;
-  margin: 2rem auto 0 auto;
-  padding: 0 1rem;
-}
-
-.info-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.info-card {
-  flex: 1 1 300px;
-  background: #1e0606;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.info-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.info-card:hover {
-  transform: translateY(-10px);
-}
-
-.divider {
-  background: #ffffff;
-  margin: 3rem 0;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-
-.dynamic-heading {
-  transition: color 0.3s ease;
-  background: linear-gradient(to top, #800000, #808080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  transition: background-position 0.3s ease;
-}
 
 
 /* Footer */
@@ -216,6 +165,7 @@ body {
     align-items: center;
     top: -100%;
     transition: top 0.3s ease-in-out;
+    display: none;
   }
 
   .navbar ul.show {
@@ -317,7 +267,7 @@ body {
   background-position: center;
   text-align: center;
   min-height: 300px;
-  width: 100vw;             /* Full viewport width */
+  width: 100vw;             
   margin-left: calc(-50vw + 50%);
   margin-bottom: 0; 
   padding-bottom: 40px;
@@ -381,8 +331,8 @@ body {
 }
 
 :root {
-  --maroon: #ffffff;
-  --white: #690808;
+  --maroon: #78be89;
+  --white: #ffffff;
 }
 
 .button-primary,
@@ -482,3 +432,65 @@ body {
     right: 0px;
     transform: rotate(3deg);
   }
+
+  /* Hide toggle button by default */
+#toggleBtn {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  #toggleBtn {
+    display: block; /* Show the toggle button */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #535353;
+    order: 2; 
+  }
+
+
+  #navLinks {
+    display: none;
+  }
+
+
+  #navLinks.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 99;
+  }
+}
+
+/* Quote Section */
+  .quote-section {
+    background-color: transparent;
+    padding: 5rem 2rem;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    min-height: 200px;
+    z-index: 2;
+  }
+  
+  
+  .quote-text {
+    opacity: 100;
+    transform: translateY(30px);
+    transition: all 1s ease-in-out;
+    font-style: italic;
+    font-size: 1.1rem;
+    z-index: 2;
+    color:#1b3c0a;
+    font-weight: bold;
+    font-size: large;
+  }
+  
